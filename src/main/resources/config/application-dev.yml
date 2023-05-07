@@ -1,0 +1,7 @@
+logging:
+  level:
+    org:
+      springframework: DEBUG
+      hibernate: DEBUG
+  file:
+    path: logs/dev

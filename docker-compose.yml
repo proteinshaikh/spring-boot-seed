@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  seed-service:
+    build: .
+    ports:
+      - "8081:8081"
+    environment:
+      - SPRING_PROFILES_ACTIVE=${SPRING_PROFILES_ACTIVE:-default}
+    depends_on:
+      - role-service
+  role-service:
+    image: openjdk:17-jdk-alpine
+    command: ["java", "-jar", "role-service.jar"]
+    working_dir: /app
+    volumes:
+      - ./role-service/build/libs:/app
+    environment:
+      - SERVER_PORT=8082

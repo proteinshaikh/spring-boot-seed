@@ -1,0 +1,9 @@
+logging:
+  level:
+    org:
+      springframework: INFO
+      hibernate: INFO
+  file:
+    path: logs
+server:
+  port: 8081

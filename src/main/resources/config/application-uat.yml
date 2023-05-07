@@ -1,0 +1,7 @@
+logging:
+  level:
+    org:
+      springframework: WARN
+      hibernate: WARN
+  file:
+    path: logs/uat
